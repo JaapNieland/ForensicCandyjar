@@ -1,0 +1,11 @@
+{% if last_measurements %}
+<ul>
+    {% for measurement in last_measurements %}
+    <li>
+        {{measurement.timestamp | date}}: {{measurement.weight}}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No measurements</p>
+{% endif %}
